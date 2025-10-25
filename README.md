@@ -143,7 +143,7 @@ Welcome to **RetailBrain AI**, your intelligent commerce assistant for multi-con
 
 # 🗂️ RetailBrain AI Repo Structure – Visual Tree 🌟🤖🛍️
 
-📁 root  
+```📁 root  
 ├─ 📄 App.tsx – Main app component 🧩  
 ├─ 📄 index.tsx / index.html – Entry points 🚀  
 ├─ 📄 package.json / tsconfig.json – Config & dependencies ⚙️  
@@ -203,6 +203,6 @@ Welcome to **RetailBrain AI**, your intelligent commerce assistant for multi-con
 │  
 └─ 📁 services – Backend & AI logic 🧠  
     └─ 📄 geminiService.ts 🤖⚡  
-
+```
 ---
 
