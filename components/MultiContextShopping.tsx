@@ -52,12 +52,32 @@ export const MultiContextShopping: React.FC = () => {
         <div className="h-full flex flex-col bg-gradient-to-br from-slate-900/60 to-slate-950/60 rounded-3xl border border-cyan-500/10 backdrop-blur-sm shadow-2xl shadow-cyan-500/5">
             <div className="flex-grow p-8 space-y-6 overflow-y-auto custom-scrollbar">
                 {messages.length === 0 && !results && (
-                    <div className="text-center text-slate-400 pt-16">
+                    <div className="text-center text-slate-400 pt-12">
                         <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-cyan-400 bg-clip-text text-transparent mb-2">Unified Shopping Assistant</h2>
                         <p className="mt-4 text-lg text-slate-300">How can I help you today?</p>
+                        <div className="mt-6 flex flex-wrap gap-2 justify-center">
+                            <button
+                                onClick={() => handleSubmit("Personal shopping for a date night")}
+                                className="text-xs font-semibold text-cyan-300 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 px-4 py-2 rounded-full border border-cyan-500/50 transition-all duration-300"
+                            >
+                                💝 Personal
+                            </button>
+                            <button
+                                onClick={() => handleSubmit("Office supplies and equipment needed")}
+                                className="text-xs font-semibold text-amber-300 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 hover:from-amber-500/30 hover:to-yellow-500/30 px-4 py-2 rounded-full border border-amber-500/50 transition-all duration-300"
+                            >
+                                💼 Corporate
+                            </button>
+                            <button
+                                onClick={() => handleSubmit("Emergency supplies for disaster preparedness")}
+                                className="text-xs font-semibold text-rose-300 bg-gradient-to-r from-rose-500/20 to-red-500/20 hover:from-rose-500/30 hover:to-red-500/30 px-4 py-2 rounded-full border border-rose-500/50 transition-all duration-300"
+                            >
+                                🚨 Emergency
+                            </button>
+                        </div>
                         <button
                             onClick={() => handleSubmit(examplePrompt)}
-                            className="mt-6 text-sm font-semibold text-cyan-300 hover:text-white bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 px-6 py-3 rounded-full border border-cyan-500/50 transition-all duration-300 shadow-lg shadow-cyan-500/10"
+                            className="mt-6 text-sm font-semibold text-cyan-300 hover:text-white bg-gradient-to-r from-cyan-500/30 to-blue-500/30 hover:from-cyan-500/40 hover:to-blue-500/40 px-8 py-3 rounded-full border border-cyan-500/50 transition-all duration-300 shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/25 inline-block"
                         >
                             Try an Example
                         </button>
