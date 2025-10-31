@@ -7,7 +7,7 @@ export const CrisisResilienceTab: React.FC = () => {
     return (
         <div className="h-full flex flex-col gap-8">
             <TabHeader
-                image="https://images.unsplash.com/photo-1642253644272-211516a45a82?q=80&w=2070&auto=format&fit=crop"
+                image="https://cdn.builder.io/api/v1/image/assets%2Fb3ca505f4755410ca1f128143966e5c6%2F8a480331a2eb4c2695d32def55794c85?format=webp"
                 title="Crisis Resilience"
                 description="Instantly find alternative suppliers, reroute logistics during disruptions, and manage emergency stock allocation to ensure business continuity."
             />

@@ -17,10 +17,10 @@ export const AutonomousSupplyChainTab: React.FC = () => {
         <>
             <div className="h-full flex flex-col gap-8">
                 <TabHeader
-                    image="https://images.unsplash.com/photo-1577985051167-5d55752efc13?q=80&w=1936&auto=format&fit=crop"
-                    title="Autonomous Supply Chain"
-                    description="Deploy autonomous agents to negotiate with 50,000+ suppliers, orchestrate global logistics, and manage crises in real-time."
-                />
+                image="https://cdn.builder.io/api/v1/image/assets%2Fb3ca505f4755410ca1f128143966e5c6%2Fd8d3d7f09cb246e18ac9160dd7dc6625?format=webp"
+                title="Autonomous Supply Chain"
+                description="Deploy autonomous agents to negotiate with 50,000+ suppliers, orchestrate global logistics, and manage crises in real-time."
+            />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <FeatureCard
                         icon={<BoxIcon className="w-8 h-8" />}
