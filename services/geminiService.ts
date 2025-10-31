@@ -1,7 +1,18 @@
 import { GoogleGenAI, Type, Modality } from "@google/genai";
 import type { ShoppingResults, MoodAnalysisResult, TrendForecast, ContingencyPlan, SourcingStrategy } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+let aiInstance: GoogleGenAI | null = null;
+
+function getAIInstance(): GoogleGenAI {
+    if (!aiInstance) {
+        const apiKey = process.env.API_KEY;
+        if (!apiKey) {
+            throw new Error("Google Gemini API key is not configured. Please add API_KEY to your .env file.");
+        }
+        aiInstance = new GoogleGenAI({ apiKey });
+    }
+    return aiInstance;
+}
 
 export async function getShoppingSuggestions(prompt: string): Promise<ShoppingResults> {
     const response = await ai.models.generateContent({
