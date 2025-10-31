@@ -11,18 +11,18 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     const isUser = message.sender === 'user';
 
     return (
-        <div className={`flex items-start gap-4 ${isUser ? 'justify-end' : ''}`}>
+        <div className={`flex items-end gap-3 ${isUser ? 'justify-end' : ''}`}>
             {!isUser && (
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
-                    <RobotIcon className="w-6 h-6 text-cyan-400" />
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <RobotIcon className="w-5 h-5 text-white" />
                 </div>
             )}
-            <div className={`max-w-xl p-4 rounded-2xl ${isUser ? 'bg-cyan-600 text-white rounded-br-none' : 'bg-slate-800 text-slate-200 rounded-bl-none'}`}>
-                <p className="text-base">{message.content}</p>
+            <div className={`max-w-2xl px-5 py-4 rounded-2xl ${isUser ? 'bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-br-none shadow-lg shadow-cyan-500/30' : 'bg-gradient-to-br from-slate-800/60 to-slate-900/40 text-slate-100 rounded-bl-none border border-cyan-500/20 shadow-lg shadow-cyan-500/5'}`}>
+                <p className="text-sm leading-relaxed">{message.content}</p>
             </div>
             {isUser && (
-                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-slate-600 flex items-center justify-center">
-                    <UserIcon className="w-6 h-6 text-slate-300" />
+                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <UserIcon className="w-5 h-5 text-white" />
                 </div>
             )}
         </div>
