@@ -19,25 +19,25 @@ export const AutonomousSupplyChainTab: React.FC = () => {
                 <TabHeader
                     image="https://images.unsplash.com/photo-1577985051167-5d55752efc13?q=80&w=1936&auto=format&fit=crop"
                     title="Autonomous Supply Chain"
-                    description="Automate complex supply chain operations, from procurement to logistics, with intelligent AI agents."
+                    description="Deploy autonomous agents to negotiate with 50,000+ suppliers, orchestrate global logistics, and manage crises in real-time."
                 />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <FeatureCard
                         icon={<BoxIcon className="w-8 h-8" />}
                         title="Automated Procurement"
-                        description="AI agents automatically source and order inventory based on predictive analytics and stock levels."
+                        description="AI predicts needs and places orders to prevent stockouts, optimizing inventory turnover and reducing unsold stock."
                         onClick={() => setActiveModal('procurement')}
                     />
                     <FeatureCard
                         icon={<HandshakeIcon className="w-8 h-8" />}
                         title="AI-Powered Negotiation"
-                        description="Deploy negotiation bots to secure optimal pricing and terms with suppliers in real-time."
+                        description="Our bots negotiate with thousands of suppliers simultaneously to secure the best price, quality, and delivery terms."
                         onClick={() => setActiveModal('negotiation')}
                     />
                     <FeatureCard
                         icon={<ZapIcon className="w-8 h-8" />}
                         title="Dynamic Logistics"
-                        description="Optimize shipping routes and carrier selection dynamically in response to demand and disruptions."
+                        description="Instantly reroutes global shipments around disruptions, coordinating air, sea, and ground transport to maintain high delivery reliability."
                         onClick={() => setActiveModal('logistics')}
                     />
                 </div>

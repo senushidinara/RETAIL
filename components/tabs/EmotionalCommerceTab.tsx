@@ -8,7 +8,7 @@ export const EmotionalCommerceTab: React.FC = () => {
             <TabHeader
                 image="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1887&auto=format&fit=crop"
                 title="Emotional Commerce"
-                description="Unlock deeper customer understanding by analyzing text for emotional cues and providing mood-based product recommendations."
+                description="Detects a user's emotional state from text to provide tailored recommendations, from stress-reducing groceries to inspirational discovery journeys."
             />
             <div className="flex-grow">
                 <MoodAnalysisEngine />

@@ -9,7 +9,7 @@ import { GiftIcon } from './icons/GiftIcon';
 import { BriefcaseIcon } from './icons/BriefcaseIcon';
 import { AlertIcon } from './icons/AlertIcon';
 
-const examplePrompt = "I need a 10th anniversary gift for my wife, also need to order more printer paper and ink for the office, and can you check on the status of our emergency flashlight order?";
+const examplePrompt = "I need a birthday gift, office supplies, and emergency batteries";
 
 export const MultiContextShopping: React.FC = () => {
     const [messages, setMessages] = useState<ChatMessageType[]>([]);

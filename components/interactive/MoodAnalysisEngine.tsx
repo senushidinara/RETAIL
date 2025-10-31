@@ -4,7 +4,7 @@ import type { MoodAnalysisResult } from '../../types';
 import { LoadingSpinner } from '../icons/LoadingSpinner';
 import { WandSparklesIcon } from '../icons/WandSparklesIcon';
 
-const exampleMood = "Ugh, this week has been so stressful. I just want to relax and forget about work for a bit.";
+const exampleMood = "I need groceries but I’m overwhelmed";
 
 export const MoodAnalysisEngine: React.FC = () => {
     const [text, setText] = useState('');

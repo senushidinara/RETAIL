@@ -48,7 +48,7 @@ export const EmergencySourcing: React.FC = () => {
                             type="text"
                             value={item}
                             onChange={(e) => setItem(e.target.value)}
-                            placeholder="e.g., Critical Medical Ventilator Parts"
+                            placeholder="e.g., Generators and bottled water"
                             className="w-full bg-slate-800 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 focus:outline-none text-base"
                         />
                     </div>
@@ -59,7 +59,7 @@ export const EmergencySourcing: React.FC = () => {
                             type="text"
                             value={location}
                             onChange={(e) => setLocation(e.target.value)}
-                            placeholder="e.g., Midwest Distribution Center"
+                            placeholder="e.g., Miami, FL during hurricane"
                             className="w-full bg-slate-800 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-cyan-500 focus:outline-none text-base"
                         />
                     </div>
