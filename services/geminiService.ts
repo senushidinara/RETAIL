@@ -1,7 +1,18 @@
 import { GoogleGenAI, Type, Modality } from "@google/genai";
 import type { ShoppingResults, MoodAnalysisResult, TrendForecast, ContingencyPlan, SourcingStrategy } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+let ai: GoogleGenAI | null = null;
+
+function getAI(): GoogleGenAI {
+    if (!ai) {
+        const apiKey = process.env.API_KEY;
+        if (!apiKey) {
+            throw new Error('API_KEY environment variable is not set');
+        }
+        ai = new GoogleGenAI({ apiKey });
+    }
+    return ai;
+}
 
 export async function getShoppingSuggestions(prompt: string): Promise<ShoppingResults> {
     const response = await ai.models.generateContent({
