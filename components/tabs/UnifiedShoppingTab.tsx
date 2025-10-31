@@ -1,6 +1,8 @@
 import React from 'react';
 import { TabHeader } from '../ui/TabHeader';
 import { MultiContextShopping } from '../MultiContextShopping';
+import { DashboardStats } from '../DashboardStats';
+import { QuickActions } from '../QuickActions';
 
 export const UnifiedShoppingTab: React.FC = () => {
     return (
@@ -10,6 +12,8 @@ export const UnifiedShoppingTab: React.FC = () => {
                 title="Unified Shopping"
                 description="Handle personal, corporate, and emergency shopping in a single, intelligent interface, with consolidated checkout and behavioral insights."
             />
+            <DashboardStats />
+            <QuickActions />
             <div className="flex-grow">
                  <MultiContextShopping />
             </div>
