@@ -7,34 +7,48 @@
     <title>RetailBrain AI | Intelligent Commerce Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* General custom scrollbar for a more modern look */
+      /* Luxury custom scrollbar */
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #1e293b; /* slate-800 */
+        background: linear-gradient(to bottom, #0f172a, #1e293b);
       }
       ::-webkit-scrollbar-thumb {
-        background: #475569; /* slate-600 */
-        border-radius: 4px;
+        background: linear-gradient(to bottom, #06b6d4, #0ea5e9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #64748b; /* slate-500 */
+        background: linear-gradient(to bottom, #22d3ee, #38bdf8);
+        box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
       }
 
       /* Specific styling for the chat container and other scrollables */
       .custom-scrollbar::-webkit-scrollbar {
-        width: 8px;
+        width: 10px;
       }
       .custom-scrollbar::-webkit-scrollbar-track {
-        background: #1e293b; /* slate-800 */
+        background: linear-gradient(to bottom, #0f172a, #1e293b);
       }
       .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #475569; /* slate-600 */
-        border-radius: 4px;
+        background: linear-gradient(to bottom, #06b6d4, #0ea5e9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
       }
       .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #64748b; /* slate-500 */
+        background: linear-gradient(to bottom, #22d3ee, #38bdf8);
+        box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+      }
+
+      /* Luxury animations */
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.3)); }
+        50% { filter: drop-shadow(0 0 16px rgba(6, 182, 212, 0.6)); }
+      }
+
+      .luxury-glow {
+        animation: glow 3s ease-in-out infinite;
       }
 
       #root {
