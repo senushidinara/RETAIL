@@ -49,15 +49,15 @@ export const MultiContextShopping: React.FC = () => {
     };
 
     return (
-        <div className="h-full flex flex-col bg-slate-900 rounded-2xl border border-slate-800">
-            <div className="flex-grow p-6 space-y-6 overflow-y-auto custom-scrollbar">
+        <div className="h-full flex flex-col bg-gradient-to-br from-slate-900/60 to-slate-950/60 rounded-3xl border border-cyan-500/10 backdrop-blur-sm shadow-2xl shadow-cyan-500/5">
+            <div className="flex-grow p-8 space-y-6 overflow-y-auto custom-scrollbar">
                 {messages.length === 0 && !results && (
                     <div className="text-center text-slate-400 pt-16">
-                        <h2 className="text-3xl font-bold text-slate-200">Unified Shopping Assistant</h2>
-                        <p className="mt-2 text-lg">How can I help you today?</p>
-                        <button 
+                        <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-cyan-400 bg-clip-text text-transparent mb-2">Unified Shopping Assistant</h2>
+                        <p className="mt-4 text-lg text-slate-300">How can I help you today?</p>
+                        <button
                             onClick={() => handleSubmit(examplePrompt)}
-                            className="mt-4 text-sm text-cyan-400 hover:text-cyan-300 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700 transition-colors"
+                            className="mt-6 text-sm font-semibold text-cyan-300 hover:text-white bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 px-6 py-3 rounded-full border border-cyan-500/50 transition-all duration-300 shadow-lg shadow-cyan-500/10"
                         >
                             Try an Example
                         </button>
@@ -100,7 +100,7 @@ export const MultiContextShopping: React.FC = () => {
                 )}
                 <div ref={chatEndRef} />
             </div>
-            <div className="p-6 border-t border-slate-800 flex-shrink-0">
+            <div className="p-8 border-t border-cyan-500/10 flex-shrink-0 bg-gradient-to-b from-transparent to-slate-950/30">
                 <ChatInput
                     value={input}
                     onChange={setInput}
