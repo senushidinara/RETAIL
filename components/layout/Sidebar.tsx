@@ -32,18 +32,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-cyan-400 bg-clip-text text-transparent">RetailBrain AI</h1>
             </div>
             <nav className="flex flex-col gap-2">
-                {navItems.map(item => (
+                {navItems.map((item, index) => (
                     <button
                         key={item.id}
                         onClick={() => setActiveTab(item.id)}
-                        className={`flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
+                        className={`flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 group relative overflow-hidden ${
                             activeTab === item.id
                                 ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/20 text-cyan-200 border border-cyan-400/30 shadow-lg shadow-cyan-500/10'
                                 : 'text-slate-400 hover:bg-slate-800/50 hover:text-cyan-300 hover:border hover:border-cyan-500/20'
                         }`}
                     >
-                        {item.icon}
-                        <span>{item.label}</span>
+                        <span className="relative">{item.icon}</span>
+                        <span className="flex-1 text-left">{item.label}</span>
+                        {index < 3 && (
+                            <span className="px-2 py-0.5 text-xs font-bold bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 rounded-full border border-cyan-500/30 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+                                NEW
+                            </span>
+                        )}
                     </button>
                 ))}
             </nav>
