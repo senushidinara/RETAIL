@@ -31,9 +31,15 @@ function App() {
   };
 
   return (
-    <div className="bg-slate-900 text-slate-200 min-h-screen flex">
+    <div className="relative min-h-screen flex overflow-hidden">
+      {/* Luxury gradient background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-20"></div>
+      <div className="fixed inset-0 bg-gradient-to-tr from-blue-950/20 via-transparent to-purple-950/20 -z-20"></div>
+      <div className="fixed top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl -z-10"></div>
+      <div className="fixed bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-purple-500/5 to-pink-500/5 rounded-full blur-3xl -z-10"></div>
+
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className="flex-1 p-8 overflow-y-auto h-screen">
+      <main className="flex-1 p-8 overflow-y-auto h-screen text-slate-100">
         <Header />
         <div className="mt-8 h-[calc(100%-80px)]">
             {renderActiveTab()}
