@@ -15,7 +15,7 @@ function getAI(): GoogleGenAI {
 }
 
 export async function getShoppingSuggestions(prompt: string): Promise<ShoppingResults> {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
         model: 'gemini-2.5-flash',
         contents: `Parse the following user request and provide shopping suggestions for each context. The user request is: "${prompt}"`,
         config: {
@@ -82,7 +82,7 @@ export async function getShoppingSuggestions(prompt: string): Promise<ShoppingRe
 }
 
 export async function editImageWithPrompt(base64: string, mimeType: string, prompt: string): Promise<string> {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
         model: 'gemini-2.5-flash-image',
         contents: {
             parts: [
@@ -111,7 +111,7 @@ export async function editImageWithPrompt(base64: string, mimeType: string, prom
 }
 
 export async function analyzeMoodAndSuggestProducts(text: string): Promise<MoodAnalysisResult> {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
         model: 'gemini-2.5-flash',
         contents: `Analyze the mood of the following text and suggest 3 relevant products. Text: "${text}"`,
         config: {
@@ -150,7 +150,7 @@ export async function analyzeMoodAndSuggestProducts(text: string): Promise<MoodA
 }
 
 export async function forecastProductTrend(category: string, season: string): Promise<TrendForecast> {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
         model: 'gemini-2.5-pro',
         contents: `Forecast a single viral product trend for the category "${category}" during the "${season}" season. Provide a catchy name, a description, and a confidence score.`,
         config: {
@@ -177,7 +177,7 @@ export async function forecastProductTrend(category: string, season: string): Pr
 }
 
 export async function generateContingencyPlan(scenario: string): Promise<ContingencyPlan> {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
         model: 'gemini-2.5-pro',
         contents: `Given the following supply chain crisis scenario, create a high-level 3-step contingency plan. Scenario: "${scenario}"`,
         config: {
@@ -216,7 +216,7 @@ export async function generateContingencyPlan(scenario: string): Promise<Conting
 }
 
 export async function findEmergencySourcing(item: string, location: string): Promise<SourcingStrategy> {
-    const response = await ai.models.generateContent({
+    const response = await getAI().models.generateContent({
         model: 'gemini-2.5-pro',
         contents: `We have a critical shortage of "${item}" at our "${location}". Generate 3 diverse, actionable emergency sourcing strategies with different priority levels (High, Medium, Low).`,
         config: {
