@@ -47,6 +47,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                     </button>
                 ))}
             </nav>
+            <div className="my-6">
+                <div className="relative overflow-hidden rounded-lg h-32 bg-slate-800 border border-slate-700/50">
+                    <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Fb3ca505f4755410ca1f128143966e5c6%2Fcf14a290af864298a1eba5336d233d98?format=webp"
+                        alt="RetailBrain featured"
+                        className="w-full h-full object-cover opacity-90"
+                    />
+                </div>
+            </div>
             <div className="mt-auto">
                  <div className="p-4 bg-slate-800 rounded-lg text-center">
                     <p className="text-sm text-slate-300">Upgrade to Pro</p>
