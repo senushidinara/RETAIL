@@ -49,17 +49,17 @@ export const ShoppingContextCard: React.FC<ShoppingContextCardProps> = ({ title,
     }
 
     return (
-        <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
-            <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-slate-700/50 rounded-lg text-cyan-400">
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 border border-cyan-500/15 rounded-2xl p-7 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300 shadow-lg shadow-cyan-500/5 hover:shadow-cyan-500/15 group">
+            <div className="flex items-center gap-4 mb-5">
+                <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl text-cyan-300 border border-cyan-500/30 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
                     {icon}
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-100">{title}</h3>
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">{title}</h3>
             </div>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
                 {items.map((item, index) => (
-                    <li key={index} className="flex items-start gap-4 p-4 bg-slate-800 rounded-lg">
-                        <div className="text-xl mt-1">
+                    <li key={index} className="flex items-start gap-4 p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/30 rounded-xl border border-cyan-500/10 hover:border-cyan-500/20 hover:bg-slate-800/70 transition-all duration-300">
+                        <div className="text-xl mt-1 text-cyan-300">
                             {('icon' in item) ? item.icon : <ClipboardListIcon className="w-6 h-6 text-slate-400" />}
                         </div>
                         <div className="flex-1">
