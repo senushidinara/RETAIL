@@ -3,6 +3,7 @@ import { TabHeader } from '../ui/TabHeader';
 import { MultiContextShopping } from '../MultiContextShopping';
 import { DashboardStats } from '../DashboardStats';
 import { QuickActions } from '../QuickActions';
+import { FeaturesShowcase } from '../FeaturesShowcase';
 
 export const UnifiedShoppingTab: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ export const UnifiedShoppingTab: React.FC = () => {
             />
             <DashboardStats />
             <QuickActions />
+            <FeaturesShowcase />
             <div className="flex-grow">
                  <MultiContextShopping />
             </div>
