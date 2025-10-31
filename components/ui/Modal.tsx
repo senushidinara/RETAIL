@@ -21,21 +21,21 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, 
     if (!isOpen) return null;
 
     return (
-        <div 
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity animate-fade-in"
+        <div
+            className="fixed inset-0 bg-black/70 backdrop-blur-xl flex items-center justify-center z-50 transition-opacity animate-fade-in"
             onClick={onClose}
         >
-            <div 
-                className={`bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full m-4 flex flex-col ${sizeClasses[size]}`}
+            <div
+                className={`bg-gradient-to-br from-slate-900/95 to-slate-950/95 border border-cyan-500/20 rounded-3xl shadow-2xl shadow-cyan-500/20 w-full m-4 flex flex-col ${sizeClasses[size]}`}
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="flex items-center justify-between p-5 border-b border-slate-700 flex-shrink-0">
-                    <h3 className="text-xl font-bold text-slate-100">{title}</h3>
-                    <button onClick={onClose} className="text-slate-400 hover:text-white transition-colors">
+                <div className="flex items-center justify-between p-7 border-b border-cyan-500/10 flex-shrink-0">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">{title}</h3>
+                    <button onClick={onClose} className="p-2 text-slate-400 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 border border-transparent hover:border-cyan-500/30">
                         <XIcon className="w-6 h-6" />
                     </button>
                 </div>
-                <div className="p-6 overflow-y-auto custom-scrollbar" style={{maxHeight: '80vh'}}>
+                <div className="p-8 overflow-y-auto custom-scrollbar" style={{maxHeight: '80vh'}}>
                     {children}
                 </div>
             </div>
