@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { Header } from './components/Header';
+import { SystemBanner } from './components/SystemBanner';
 import { UnifiedShoppingTab } from './components/tabs/UnifiedShoppingTab';
 import { EmotionalCommerceTab } from './components/tabs/EmotionalCommerceTab';
 import { PredictiveInventoryTab } from './components/tabs/PredictiveInventoryTab';
@@ -41,7 +42,8 @@ function App() {
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
       <main className="flex-1 p-8 overflow-y-auto h-screen text-slate-100">
         <Header />
-        <div className="mt-8 h-[calc(100%-80px)]">
+        <SystemBanner initialVisible={true} />
+        <div className="mt-6 h-[calc(100%-140px)]">
             {renderActiveTab()}
         </div>
       </main>
