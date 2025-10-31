@@ -70,7 +70,7 @@ export const ImageStudioTab: React.FC = () => {
     return (
         <div className="h-full flex flex-col gap-8">
             <TabHeader
-                image="https://images.unsplash.com/photo-1617791160536-595a724029a7?q=80&w=1887&auto=format&fit=crop"
+                image="https://cdn.builder.io/api/v1/image/assets%2Fb3ca505f4755410ca1f128143966e5c6%2F1c7481a8d19e4df78caf6f0e5c123930?format=webp"
                 title="Image Studio"
                 description="Instantly edit product photos, create marketing assets, or generate new visual concepts with simple text prompts."
             />
